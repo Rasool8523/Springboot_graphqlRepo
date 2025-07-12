@@ -32,7 +32,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 	@Override
 	public Employee getEmployeeById(long id) {
 		// TODO Auto-generated method stub
-		return null;
+		return repo.findById(id).get();
 	}
 
 }

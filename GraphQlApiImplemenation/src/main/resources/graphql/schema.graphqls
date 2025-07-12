@@ -1,10 +1,12 @@
 type Employee {
-empId:ID
-name:String
-designation:String
-salary:Float
+empId:ID!
+name:String!
+designation:String!
+salary:Float!
 }
 
 type Query {
 getAllEmployees:[Employee]
+getEmployeeById(empId:ID!):Employee
 }
+

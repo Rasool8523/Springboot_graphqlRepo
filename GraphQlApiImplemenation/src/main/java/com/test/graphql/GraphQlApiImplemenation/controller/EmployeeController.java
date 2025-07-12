@@ -3,6 +3,7 @@ package com.test.graphql.GraphQlApiImplemenation.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.graphql.data.method.annotation.Argument;
 import org.springframework.graphql.data.method.annotation.QueryMapping;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -33,5 +34,11 @@ public class EmployeeController {
 	public List<Employee> getAllEmployees() {
 		List<Employee> empList = service.getAllEmployees();
 		return empList;
+	}
+	
+	@QueryMapping
+	public Employee getEmployeeById(@Argument long empId) {
+		Employee emp = service.getEmployeeById(empId);
+		return emp;
 	}
 }
