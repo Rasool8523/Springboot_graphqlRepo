@@ -10,3 +10,13 @@ getAllEmployees:[Employee]
 getEmployeeById(empId:ID!):Employee
 }
 
+input EmployeeInput {
+name:String!
+designation:String!
+salary:Float!
+}
+
+type Mutation {
+addEmployee(employee:EmployeeInput!):Employee
+}
+
