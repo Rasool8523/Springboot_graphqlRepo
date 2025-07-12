@@ -1,0 +1,10 @@
+type Employee {
+empId:ID
+name:String
+designation:String
+salary:Float
+}
+
+type Query {
+getAllEmployees:[Employee]
+}
